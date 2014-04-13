@@ -65,7 +65,6 @@
 
   // creates a message node and appends it to the conversation
   function display_msg(data){
-    //$("#conversation").append("<div class='msg' style='color:"+data.c+"'>"+data.m+"</div>");
     if(data.v){
       var wrapper = document.createElement("div");
 
@@ -103,6 +102,8 @@
       // document.getElementById("conversation").appendChild(video);
       // document.getElementById("conversation").appendChild(msg);
     document.getElementById("conversation").appendChild(wrapper);
+    } else {
+      $("#conversation").append("<div class='msg' style='color:"+data.c+"'>"+data.m+"</div>");
     }
   }
 
