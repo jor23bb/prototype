@@ -94,6 +94,8 @@
       wrapper.appendChild(video);
       wrapper.appendChild(msg);
 
+      var conversationEl = document.getElementById("conversation");
+      conversationEl.scrollTop = conversationEl.scrollHeight;
 
       // for gif instead, use this code below and change mediaRecorder.mimeType in onMediaSuccess below
       // var video = document.createElement("img");
