@@ -28,7 +28,7 @@
     var fb_new_chat_room = fb_instance.child('chatrooms').child(fb_chat_room_id);
     var fb_instance_users = fb_new_chat_room.child('users');
     var fb_instance_stream = fb_new_chat_room.child('stream');
-    var my_color = "#"+((1<<24)*Math.random()|0).toString(16);
+    var my_color = "#"+((1<<23) + ((1<<23)*Math.random()|0)).toString(16);
 
     // listen to events
     fb_instance_users.on("child_added",function(snapshot){
@@ -68,12 +68,12 @@
     if(data.v){
       var wrapper = document.createElement("div");
 
-      wrapper.setAttribute("style", "display:inline; position:relative; padding-right: 4px ");
+      wrapper.setAttribute("style", "display:inline; position:relative");
 
       var msg = document.createElement("p");
       var txt = document.createTextNode(data.m);
       msg.appendChild(txt);
-      msg.setAttribute("style", "display:inline; position:absolute; left: 2px; background-color: black; opacity: .6; bottom:-12px; color:" + data.c);
+      msg.setAttribute("style", "position:absolute; left: 2px; background-color: black; opacity: .7; bottom:-15px; color:" + data.c);
       //msg.setAttribute("style", "display: inline;");// margin-left: -100px; margin-top: -200px; padding-right: 100px;");
 
 

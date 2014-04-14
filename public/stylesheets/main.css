@@ -26,6 +26,9 @@ a {
   overflow-y: scroll;
   height: 100%;
 }
+#conversation video {
+  vertical-align: bottom;
+}
 #submission {
   position: fixed;
   bottom: 0;
